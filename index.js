@@ -1,7 +1,7 @@
 /**
  * @file {@link http://xotic750.github.io/core-x/ core-x}
  * Core bundle for project-x projects.
- * @version 1.0.3
+ * @version 1.0.4
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <http://www.gnu.org/licenses/gpl-3.0.html> GPL-3.0+}
@@ -59,32 +59,4 @@
   } else {
     factory();
   }
-}(this, function (obj) {
-  'use strict';
-
-  if (Object.defineProperty) {
-    obj = {};
-    try {
-      Object.defineProperty(obj, 'x', {
-        enumerable: false,
-        value: obj
-      });
-    } catch (ignore) {}
-    if (!Object.keys(obj).length && obj.x === obj) {
-      obj = {
-        parse: JSON.parse,
-        stringify: JSON.stringify,
-        decycle: JSON.decycle,
-        retrocycle: JSON.retrocycle
-      };
-      Object.keys(obj).forEach(function (name) {
-        Object.defineProperty(JSON, name, {
-          configurable: true,
-          enumerable: false,
-          writable: true,
-          value: obj[name]
-        });
-      });
-    }
-  }
-}));
+}(this, function () {}));
