@@ -2,7 +2,7 @@
   "name": "core-x",
   "homepage": "http://xotic750.github.io/core-x/",
   "description": "Core bundle for project-x projects.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "javascript",
     "bundle",
@@ -27,7 +27,8 @@
   "dependencies": {
     "es5-shim": "^4.3.1",
     "es6-shim": "^0.33.13",
-    "json3": "^3.3.2"
+    "json3": "^3.3.2",
+    "json-cycle": "^1.0.5"
   },
   "devDependencies": {
     "jscs": "^2.5.1",
