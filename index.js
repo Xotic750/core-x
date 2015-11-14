@@ -54,7 +54,7 @@
     require('es5-shim');
     require('json3');
     require('es6-shim');
-    require('./node_modules/json2/cycle.js');
+    require('./contrib/cycle.js');
     factory();
   } else {
     factory();
