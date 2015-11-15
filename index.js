@@ -1,7 +1,7 @@
 /**
  * @file {@link http://xotic750.github.io/core-x/ core-x}
  * Core bundle for project-x projects.
- * @version 1.0.4
+ * @version 1.0.5
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <http://www.gnu.org/licenses/gpl-3.0.html> GPL-3.0+}
@@ -30,7 +30,7 @@
         'es5-shim': cdnjs + 'es5-shim/4.3.1/es5-shim.min',
         'es6-shim': cdnjs + 'es6-shim/0.33.13/es6-shim.min',
         json3: cdnjs + 'json3/3.3.2/json3.min',
-        cycle: 'https://rawgit.com/douglascrockford/JSON-js/master/cycle'
+        cycle: 'https://rawgit.com/Xotic750/cycle-x/master/lib/cycle-x.min.js'
       },
       //Remember: only use shim config for non-AMD scripts,
       //scripts that do not already call define(). The shim
@@ -54,7 +54,7 @@
     require('es5-shim');
     require('json3');
     require('es6-shim');
-    require('json-cycle');
+    require('cycle-x');
     factory();
   } else {
     factory();
