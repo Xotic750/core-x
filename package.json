@@ -2,7 +2,7 @@
   "name": "core-x",
   "homepage": "http://xotic750.github.io/core-x/",
   "description": "Core bundle for project-x projects.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "javascript",
     "bundle",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git@github.com:Xotic750/core-x.git"
   },
-  "main": "index.js",
+  "main": "core-x.js",
   "author": {
     "name": "Xotic750",
     "email": "Xotic750@gmail.com"
@@ -28,21 +28,17 @@
     "es5-shim": "^4.3.1",
     "es6-shim": "^0.33.13",
     "json3": "^3.3.2",
-    "cycle-x": "^1.0.0"
+    "cycle-x": "^1.0.1"
   },
   "devDependencies": {
     "jscs": "^2.5.1",
+    "uglify-js": "^2.5.0",
     "uglifyify": "^3.0.1",
     "browserify": "12.0.1"
   },
-  "browser": {
-    "es5-shim": "./node_modules/es5-shim/es5-shim.min.js",
-    "es6-shim": "./node_modules/es6-shim/es6-shim.min.js",
-    "json3": "./node_modules/json3/lib/json3.min.js",
-    "cycle-x": "./node_modules/cycle-x/lib/cycle-x.min.js"
-  },
   "scripts": {
-    "style": "jscs index.js",
-    "build": "npm run style && browserify -g [ uglifyify --ignore='**/*.min.js' --no-mangle --beautify [ --ascii_only --no-beautify ] ] -e index.js -o lib/core-x.min.js"
+    "style": "jscs core-x.js",
+    "uglify": "npm run style && uglifyjs core-x.js -o core-x.min.js --compress --keep-fnames --mangle --comments --beautify ascii_only=true,beautify=false --source-map core-x.map",
+    "build": "browserify -g [ uglifyify --no-mangle --beautify [ --ascii_only --no-beautify ] ] -e core-x.js -o lib/core-x.min.js"
   }
 }
