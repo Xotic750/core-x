@@ -1,7 +1,7 @@
 /**
  * @file {@link http://xotic750.github.io/core-x/ core-x}
  * Core bundle for project-x projects.
- * @version 1.0.14
+ * @version 1.0.15
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <http://www.gnu.org/licenses/gpl-3.0.html> GPL-3.0+}
