@@ -1,10 +1,10 @@
 /**
  * @file {@link http://xotic750.github.io/core-x/ core-x}
  * Core bundle for project-x projects.
- * @version 1.0.17
+ * @version 1.0.18
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
- * @license {@link <http://www.gnu.org/licenses/gpl-3.0.html> GPL-3.0+}
+ * @license {@link <https://opensource.org/licenses/MIT> MIT}
  * @module core-x
  */
 
@@ -21,22 +21,19 @@
 ;(function () {
   'use strict';
 
-  var ES, BigNumber, deepEqual, defProps, error;
+  var defProps;
   require('es5-shim');
   require('es5-shim/es5-sham');
   require('json3');
   require('es6-shim');
-  ES = require('es-abstract');
   require('cycle-x');
-  BigNumber = require('bignumber.js');
-  deepEqual = require('deep-equal');
   defProps = require('define-properties');
-  error = require('error-x');
   defProps(module.exports, {
-    ES: ES,
-    BigNumber: BigNumber,
-    deepEqual: deepEqual,
+    ES: require('es-abstract'),
+    BigNumber: require('bignumber.js'),
+    deepEqual: require('deep-equal'),
     defProps: defProps,
-    error: error
+    error: require('error-x'),
+    isPlainObject: require('lodash.isplainobject')
   });
 }());
