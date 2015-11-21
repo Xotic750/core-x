@@ -2,7 +2,7 @@
   "name": "core-x",
   "homepage": "http://xotic750.github.io/core-x/",
   "description": "Core bundle for project-x projects.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "keywords": [
     "javascript",
     "bundle",
@@ -39,7 +39,7 @@
   },
   "scripts": {
     "style": "jscs index.js",
-    "build": "browserify -e index.js -o lib/core-x.js",
+    "build": "browserify -e index.js -o lib/core-x.js -s returnExports",
     "build-uglify": "uglifyjs lib/core-x.js -o lib/core-x.min.js --compress unused=false,dead_code=false --keep-fnames --mangle --comments --beautify ascii_only=true,beautify=false --source-map lib/core-x.map"
   }
 }
