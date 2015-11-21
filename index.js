@@ -28,4 +28,5 @@
   module.exports.ES = require('es-abstract');
   require('cycle-x');
   module.exports.BigNumber = require('bignumber.js');
+  module.exports.deepEqual = require('deep-equal');
 }());
