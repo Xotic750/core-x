@@ -2,7 +2,7 @@
   "name": "core-x",
   "homepage": "http://xotic750.github.io/core-x/",
   "description": "Core bundle for project-x projects.",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "keywords": [
     "javascript",
     "bundle",
@@ -34,7 +34,7 @@
     "deep-equal": "1.0.1",
     "define-properties": "^1.1.2",
     "lodash.isplainobject": "^3.2.0",
-    "error-x": "^0.1.5"
+    "error-x": "^0.1.6"
   },
   "devDependencies": {
     "jscs": "^2.5.1",
