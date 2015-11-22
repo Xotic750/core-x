@@ -1,7 +1,7 @@
 /**
  * @file {@link http://xotic750.github.io/core-x/ core-x}
  * Core bundle for project-x projects.
- * @version 1.0.23
+ * @version 1.0.24
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -28,6 +28,15 @@
   require('es6-shim');
   require('cycle-x');
   defProps = require('define-properties');
+  /**
+   * Predicate that return `true`.
+   *
+   * @private
+   * @return {boolean} True.
+   */
+  function truePredicate() {
+    return true;
+  }
   defProps(module.exports, {
     ES: require('es-abstract'),
     BigNumber: require('bignumber.js'),
@@ -35,5 +44,12 @@
     defProps: defProps,
     error: require('error-x'),
     isPlainObject: require('lodash.isplainobject')
+  }, {
+    ES: truePredicate,
+    BigNumber: truePredicate,
+    deepEqual: truePredicate,
+    defProps: truePredicate,
+    error: truePredicate,
+    isPlainObject: truePredicate
   });
 }());
