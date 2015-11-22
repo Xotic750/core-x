@@ -1,7 +1,7 @@
 /**
  * @file {@link http://xotic750.github.io/core-x/ core-x}
  * Core bundle for project-x projects.
- * @version 1.0.27
+ * @version 1.0.28
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -14,9 +14,9 @@
   freeze:true, futurehostile:true, latedef:true, newcap:true, nocomma:true,
   nonbsp:true, singleGroups:true, strict:true, undef:true, unused:true,
   es3:true, esnext:false, plusplus:true, maxparams:1, maxdepth:1,
-  maxstatements:6, maxcomplexity:1 */
+  maxstatements:12, maxcomplexity:2 */
 
-/*global require */
+/*global require, JSON:true */
 
 ;(function () {
   'use strict';
@@ -24,7 +24,10 @@
   var defProps, constant, truePredicate;
   require('es5-shim');
   require('es5-shim/es5-sham');
-  require('json3');
+  if (typeof JSON === 'undefined') {
+    JSON = {};
+  }
+  require('json3').runInContext(null, JSON);
   require('es6-shim');
   require('cycle-x');
   defProps = require('define-properties');
